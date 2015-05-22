@@ -71,7 +71,7 @@ function onSuccess(imageData) {
 	canvas.setAttribute('width', width);
 	canvas.setAttribute('height', width);
 	imageObj.src = "data:image/jpeg;base64," + imageData;
-	context.drawImage(imageObj, 0, 0, 3000, 3000, 0, 0, 3000, 3000);
+	context.drawImage(imageObj, 0, 0, width, width, 0, 0, width, width);
 	var dataURL = canvas.toDataURL();
 	document.getElementById("defImg").setAttribute('crossOrigin', 'anonymous');
 	document.getElementById("defImg").src = dataURL;
