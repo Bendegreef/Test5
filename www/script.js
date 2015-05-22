@@ -62,13 +62,18 @@ function takePicture(e) {
 }
 
 function onSuccess(imageData) {
+	//var image = document.getElementById("myImage");
+	//image.src = "data:image/jpeg;base64," + imageData;
 	var canvas = document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 	var imageObj = document.getElementById("myImage");
-	var width = imageObj.width;
+	var width;
+	imageObj.src = "data:image/jpeg;base64," + imageData;
+	imageObj.onload = function() {
+		width = imageObj.width;
+	};
 	canvas.setAttribute('width', width);
 	canvas.setAttribute('height', width);
-	imageObj.src = "data:image/jpeg;base64," + imageData;
 	context.drawImage(imageObj, 0, 0, width, width, 0, 0, width, width);
 	var dataURL = canvas.toDataURL();
 	document.getElementById("defImg").setAttribute('crossOrigin', 'anonymous');
