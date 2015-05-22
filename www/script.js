@@ -69,9 +69,9 @@ function onSuccess(imageData) {
 	var imageObj = document.getElementById("myImage");
 	var width;
 	imageObj.src = "data:image/jpeg;base64," + imageData;
-	imageObj.onload = function() {
-		width = imageObj.width;
-	};
+
+	width = imageObj.width;
+
 	canvas.setAttribute('width', width);
 	canvas.setAttribute('height', width);
 	context.drawImage(imageObj, 0, 0, width, width, 0, 0, width, width);
