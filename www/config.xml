@@ -5,10 +5,10 @@
         id        = "be.erasmushogeschool.hello-camera"
         version   = "1.0.0">
 
-    <name>Test2</name>
+    <name>Test5</name>
 
     <description>
-        Test2
+        Test5
     </description>
 
     <author href="http://erasmushogeschool.be" email="Ben.de.greef@student.ehb.Be">
