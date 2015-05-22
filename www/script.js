@@ -69,7 +69,7 @@ function onSuccess(imageData) {
 	var imageObj = document.getElementById("myImage");
 	var defImg = document.getElementById("defImg");
 	var width = imageObj.width;
-	var screenWidth = device.width;
+	var screenWidth = screen.width;
 	canvas.setAttribute('width', width);
 	canvas.setAttribute('height', width);
 	defImg.setAttribute('width', screenWidth);
