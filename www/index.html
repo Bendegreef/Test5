@@ -1,26 +1,29 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
+
 <head>
-	<script src="script.js"></script>
+	<meta charset="utf-8">
+
+	<title>CameraTest</title>
+	<meta name="description" content="CameraTest">
+	<meta name="author" content="SitePoint">
+
 	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script src="script.js"></script>
+
+	<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
+
 <body>
-
-	<p>Image to use:</p>
-
-	<img id="scream" width="220" height="277" src="IMG_20150522_120104.jpg" alt="The Scream">
-
-	<p>Canvas:</p>
-
-	<canvas id="myCanvas" width="3000" height="3000"style="border:1px solid #d3d3d3;">
-		Your browser does not support the HTML5 canvas tag.
-	</canvas>
-
-	<p>Def Img: </p>
-
+	<a id="takePicture" href="#">testCamera</a>
+	<a id="takePicturePreview" href="#">testPreview</a>
+	<img id="myImage">
+	<canvas id="canvas" width="3000" height="3000" style="border:1px solid #d3d3d3;"></canvas>
 	<img id="defImg">
-
-
 
 </body>
 
