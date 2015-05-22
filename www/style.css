@@ -1,8 +1,10 @@
 #myImage {
 	display: none;
+	
 }
 #canvas {
 	display: none;
+	width: 100%;
 }
 #defImg {
 	width: 300px;
