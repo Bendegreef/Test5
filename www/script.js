@@ -67,6 +67,9 @@ function onSuccess(imageData) {
 	var canvas = document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 	var imageObj = document.getElementById("myImage");
+	var width = imageObj.width;
+	canvas.setAttribute('width', width);
+	canvas.setAttribute('height', width);
 	imageObj.src = "data:image/jpeg;base64," + imageData;
 	context.drawImage(imageObj, 0, 0, 3000, 3000, 0, 0, 3000, 3000);
 	var dataURL = canvas.toDataURL();
