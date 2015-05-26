@@ -1,6 +1,7 @@
 /* jshint
 browser: true,
 devel: true,
+jquery: true
 */
 /*
 global CanvasCamera
@@ -13,13 +14,13 @@ var destinationType; // sets the format of returned value
 
 
 document.addEventListener("deviceready", onDeviceReady, false);
-
+onDeviceReady();
 // Cordova is ready to be used!
 //
 function onDeviceReady() {
 	console.log(window.device);
 	console.log(window.plugins);
-	alert('device ready');
+	alert('device ready script.js');
 	/*var objCanvas = document.getElementById("canvas");
 	window.plugin.CanvasCamera.initialize(objCanvas);
 	alert('canvas ready');*/
@@ -28,31 +29,8 @@ function onDeviceReady() {
 
 }
 
-/*function onTakePicture() {
-	CanvasCamera.takePicture(onTakeSuccess);
-	alert('onTakePicture');
-		var opt = {
-		quality: 75,
-		destinationType: CanvasCamera.DestinationType.DATA_URL,
-		encodingType: CanvasCamera.EncodingType.JPEG,
-		saveToPhotoAlbum: false,
-		correctOrientation: true,
-		width: 200,
-		height: 200
-	};
-	CanvasCamera.start(opt);
-}
-
-function onTakeSuccess(data) {
-	alert('ontakesucces');
-	var image = document.getElementById("myImage");
-	image.src = "data:image/jpeg;base64," + data; // options.encodingType == CanvasCamera.EncodingType.JPEG
-	// image.src = "data:image/png;base64," + data; // options.encodingType == CanvasCamera.EncodingType.PNG
-}*/
-
-
-
 function takePicture(e) {
+	console.log("go");
 	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
@@ -63,8 +41,6 @@ function takePicture(e) {
 }
 
 function onSuccess(imageData) {
-	//var image = document.getElementById("myImage");
-	//image.src = "data:image/jpeg;base64," + imageData;
 	var canvas = document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 	var imageObj = document.getElementById("myImage");
